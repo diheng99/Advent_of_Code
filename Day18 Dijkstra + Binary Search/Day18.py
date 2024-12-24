@@ -1,4 +1,3 @@
-from collections import deque, defaultdict
 import heapq
 
 datas = []
@@ -50,9 +49,9 @@ def dijkstra():
 
 dist = dijkstra()
 
-print(dist.get((70, 70), "Target Unreachable"))
+print(f"Result for part 1 is: {dist.get(70, 70)}")
 
-################## Part 2 datas ##########################
+## Part 2
 
 part2Datas = []
 
@@ -98,5 +97,6 @@ for i in range(len(part2Datas)):
         matrix[int(x_pos)][int(y_pos)] = "#"
     
     dist = dijkstra()
+    
     if (70, 70) not in dict:
         break

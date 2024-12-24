@@ -2,7 +2,8 @@ towels = []
 designs = []
 reading_design = False
 
-with open("Day17.txt", "r") as file:
+with open("Day19.txt", "r") as file:
+    
     for line in file:
         if not reading_design:
             towels.extend(line.strip().split(','))
@@ -31,7 +32,7 @@ for design in designs:
     if dp[len(design)]:
         sum += 1
         
-print(sum)
+print(f"Result for part 1 is: {sum}")
 
 ## part 2
 
@@ -49,4 +50,4 @@ for design in designs:
     total_permutations = dp[len(design)]
     sum += total_permutations
 
-print(sum)
+print(f"Result for part 2 is: {sum}")
